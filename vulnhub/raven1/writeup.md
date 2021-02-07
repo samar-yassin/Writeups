@@ -18,7 +18,8 @@ command : netdiscover -r 192.168.1.0/24
 ```
 know we know our target IP is 192.168.53.130
 
-Port scan
+
+## Port scan
 now we need to do nmap scan to know what services are running.
 ![alt text](https://github.com/samar-yassin/writeups/blob/main/vulnhub/raven1/photos/nmap-A.png?raw=true)
 great ! , here we have port 22 open and that means if we can find a username we can bruteforce the password.
@@ -65,7 +66,7 @@ now let's login via ssh .
 ![alt text](https://github.com/samar-yassin/writeups/blob/main/vulnhub/raven1/photos/michaelssh.png?raw=true)
 
 
-after navigating through folders I found the second flag on var/www
+after navigating through folders I found the second flag on /var/www
 flag2{fc3fd58dcdad9ab23faca6e9a36e581c}                                                                                                           
 
 let's take a look on html directory
@@ -96,9 +97,8 @@ now back to john ! , we will save the hash in a file i named it hashsteven.
 
 ![alt text](https://github.com/samar-yassin/writeups/blob/main/vulnhub/raven1/photos/john.png?raw=true)
 
-
+##  Privilege Escalation
 now we have steven password let's login vis ssh.
-
 
 ![alt text](https://github.com/samar-yassin/writeups/blob/main/vulnhub/raven1/photos/stevenssh.png?raw=true)
 
