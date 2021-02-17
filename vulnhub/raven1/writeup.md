@@ -1,7 +1,13 @@
 # raven writeup
+**you can download it from here [raven](https://www.vulnhub.com/entry/raven-1,256/)**
 
-
-**you can download it from here https://www.vulnhub.com/entry/raven-1,256/**
+# Tools :
+- nmap
+- dirb
+- hydra
+- wpscan
+- john the ripper
+- burpsuite
 
 ## Find  IP adress
 first step is to get the IP of the machine , so we can run netdiscover or nmap.
