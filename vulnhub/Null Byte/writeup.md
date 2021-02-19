@@ -132,7 +132,7 @@ okay that means we are on the right path , let's run the executable file
 here it just run ps !
 so if we manage to make this file thinks that "ps" command is "sh" , running procwatch will give us root shell
 
-looking at those articles [path variable](http://www.linfo.org/path_env_var.html#:~:text=PATH%20is%20an%20environmental%20variable,commands%20issued%20by%20a%20user.) [exploit suid](https://www.pentestpartners.com/security-blog/exploiting-suid-executables/) will help alot.
+looking at those articles [path variable](http://www.linfo.org/path_env_var.html#:~:text=PATH%20is%20an%20environmental%20variable,commands%20issued%20by%20a%20user.)  ,  [exploit suid](https://www.pentestpartners.com/security-blog/exploiting-suid-executables/) will help alot.
 
 so we basiclly will copy "/bin/sh" to somewhere and then append it to the path variable.
 so when we run the file first thing it will run ps and $PATH will search for ps at /tmp/ where we coppied "sh" as ps there
