@@ -35,7 +35,7 @@ let's look at dirb
 
 `dirb 192.168.53.135`
 directory uploads ! ,but nothing interesing in it ..
-and phpmyadmin looks interesing . tried to log at it as root root and was wrong so let's dig more
+and phpmyadmin looks interesing . tried to login as root root and was wrong so let's dig more
 
 so nothing here but this photo? , let's examine it!
 downloaded it and I will run exiftool on it
@@ -150,6 +150,7 @@ printing out PATH variable so we can know what to modify and then modifying it
 ![](https://i.imgur.com/q5YeqBi.png)
 
 `echo $PATH`
+
 `export PATH=/tmp:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games`
 
 so here we ran procwatch and we're root now!
