@@ -9,7 +9,7 @@
 - john the ripper
 - burpsuite
 
-## Find  IP adress
+## Find  IP address
 first step is to get the IP of the machine , so we can run netdiscover or nmap.
 here I ran netdicover.
 
